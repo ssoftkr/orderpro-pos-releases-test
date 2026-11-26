@@ -1,9 +1,9 @@
 # OrderPro POS releases
 
-Repo này chỉ chứa **file cài đặt** của app OrderPro POS (Windows), không chứa code.
+This repository holds only the **installers** of the OrderPro POS app for Windows. It contains no source code.
 
-Bản test (ví dụ ký bằng chứng chỉ tự ký): Test server và máy test. Không dùng cho cửa hàng thật.
+Test builds (for example signed with a self-signed certificate). Used by the Test server and test PCs only, never by real shops.
 
-- Mỗi phiên bản là một Release, tag đúng bằng số phiên bản (ví dụ `1.0.1`, không có `v`): `latest.yml`, file cài đặt `.exe` và `.blockmap`.
-- Phát hành bằng `npm run release` trong `clients/pos_app_electronjs` của repo `ssoftkr/orderpro`.
-- **Không xóa** Release cũ (rollback cần file bản cũ). **Không sửa hay thay file** trong Release đã đăng: cần sửa thì tăng phiên bản.
+- Each version is one Release whose tag is exactly the version number (for example `1.0.1`, without `v`), with `latest.yml`, the `.exe` installer and its `.blockmap`.
+- Publish with `npm run release` in `clients/pos_app_electronjs` of the `ssoftkr/orderpro` repository.
+- **Never delete** an old Release: rollback needs the files of older versions. **Never edit or replace the files** of a published Release: to fix something, raise the version.
